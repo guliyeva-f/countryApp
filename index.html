@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="./src/output.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+        * {
+            /* outline: 1px solid red; */
+            font-family: 'Fjalla One', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-[#f0ffe4]">
+        <div class="h-[100px] flex items-center container m-auto justify-center gap-[50px]">
+            <a href="./pages/statistics.html" target="_blank"><i class="fa-solid fa-chart-line text-2xl cursor-pointer"></i></a>
+            <ul id="h-left" class="flex gap-[50px] justify-end text-[20px] w-[40%]"></ul>
+            <div class="h-[60px] flex justify-center">
+                <img src="./assets/img/research.svg" alt="" class="h-full cursor-pointer" onclick="logo()">
+            </div>
+            <ul id="h-right" class="flex gap-[50px] justify-start text-[20px] w-[40%]"></ul>
+            <i class="fa-solid fa-sort text-2xl cursor-pointer" id="show-more-filter" onclick="showMoreFilter()"></i>
+        </div>
+    </header>
+    <main>
+        <section id="filter-section" class="container h-[0px] overflow-hidden transition-all duration-500 m-auto flex items-center justify-center flex-col gap-5">
+            <span>Burda propertylərin hamısına aid filtrləmə olacaq.. <br> dropdown(Region, Subregion, Capital, Language, Currency) <br> range slider(Population, Area) <br> checkbox(Independent, Borders) və s.</span>
+            <span>rüsxətim veriləndə 😅</span>
+        </section>
+        <section class="bg-gradient-to-br from-green-50 to-green-100 pt-5">
+            <div id="country-container" class="pb-8 container m-auto flex items-center flex-col gap-5"></div>
+            <div id="sect-title"
+                class="p-6 flex items-center gap-2 text-3xl text-gray-400 container m-auto justify-center pb-28"></div>
+            <div id="cards-container" class="container m-auto flex gap-[70px_20px] flex-wrap"></div>
+            <button id="show-more-btn" onclick="showMore()"
+                class="mt-16 block mx-auto bg-green-700 text-white px-6 py-4 rounded-full font-bold cursor-pointer mb-16 hover:bg-green-900 transition">Show
+                More</button>
+        </section>
+    </main>
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
