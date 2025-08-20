@@ -1,5 +1,14 @@
+let say;
+let allData = [];
 
-renderRegionCounts(data);
+fetch("https://raw.githubusercontent.com/TheOksigen/purfect_data/refs/heads/main/country.json")
+    .then(res => res.json())
+    .then(data => {
+        allData = data;
+        renderRegionCounts(data);
+        logo();
+    });
+
 function renderCards(data) {
     const container = document.getElementById("cards-container");
     let html = ""
@@ -29,10 +38,6 @@ function renderCards(data) {
     });
     container.innerHTML = html
 }
-
-let say;
-let allData = [];
-allData = data;
 
 function logo () {
     say = 20;
